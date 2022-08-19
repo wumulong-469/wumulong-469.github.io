@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on PaperMod</title>
-    <link>https://wumulong-469.github.io/hugo-PaperMod/zh/tags/</link>
+    <link>https://wumulong-469.github.io/zh/tags/</link>
     <description>Recent content in Tags on PaperMod</description>
     <image>
-      <url>https://wumulong-469.github.io/hugo-PaperMod/papermod-cover.png</url>
-      <link>https://wumulong-469.github.io/hugo-PaperMod/papermod-cover.png</link>
+      <url>https://wumulong-469.github.io/papermod-cover.png</url>
+      <link>https://wumulong-469.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wumulong-469.github.io/hugo-PaperMod/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wumulong-469.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>css</title>
-      <link>https://wumulong-469.github.io/hugo-PaperMod/zh/tags/css/</link>
+      <link>https://wumulong-469.github.io/zh/tags/css/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wumulong-469.github.io/hugo-PaperMod/zh/tags/css/</guid>
+      <guid>https://wumulong-469.github.io/zh/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>https://wumulong-469.github.io/hugo-PaperMod/zh/tags/html/</link>
+      <link>https://wumulong-469.github.io/zh/tags/html/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wumulong-469.github.io/hugo-PaperMod/zh/tags/html/</guid>
+      <guid>https://wumulong-469.github.io/zh/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://wumulong-469.github.io/hugo-PaperMod/zh/tags/markdown/</link>
+      <link>https://wumulong-469.github.io/zh/tags/markdown/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wumulong-469.github.io/hugo-PaperMod/zh/tags/markdown/</guid>
+      <guid>https://wumulong-469.github.io/zh/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://wumulong-469.github.io/hugo-PaperMod/zh/tags/themes/</link>
+      <link>https://wumulong-469.github.io/zh/tags/themes/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wumulong-469.github.io/hugo-PaperMod/zh/tags/themes/</guid>
+      <guid>https://wumulong-469.github.io/zh/tags/themes/</guid>
       <description></description>
     </item>
     
