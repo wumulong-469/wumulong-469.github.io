@@ -41,6 +41,19 @@
                 href="https://wumulong-469.github.io/zh/tags/html/"
                 />
   </url><url>
+    <loc>https://wumulong-469.github.io/zh/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wumulong-469.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wumulong-469.github.io/zh/"
+                />
+  </url><url>
     <loc>https://wumulong-469.github.io/zh/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -65,19 +78,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://wumulong-469.github.io/zh/posts/markdown-syntax/"
-                />
-  </url><url>
-    <loc>https://wumulong-469.github.io/zh/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wumulong-469.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wumulong-469.github.io/zh/"
                 />
   </url><url>
     <loc>https://wumulong-469.github.io/zh/posts/</loc>
