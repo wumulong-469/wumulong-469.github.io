@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://wumulong-469.github.io/zh/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +13,57 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://wumulong-469.github.io/zh/categories/"
+                />
+  </url><url>
+    <loc>https://wumulong-469.github.io/zh/categories/devlopment-env/</loc>
+    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wumulong-469.github.io/zh/</loc>
+    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wumulong-469.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wumulong-469.github.io/zh/"
+                />
+  </url><url>
+    <loc>https://wumulong-469.github.io/zh/tags/pkg/</loc>
+    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wumulong-469.github.io/zh/posts/</loc>
+    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wumulong-469.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wumulong-469.github.io/zh/posts/"
+                />
+  </url><url>
+    <loc>https://wumulong-469.github.io/zh/tags/scoop/</loc>
+    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wumulong-469.github.io/zh/posts/scoop/</loc>
+    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wumulong-469.github.io/zh/tags/</loc>
+    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wumulong-469.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wumulong-469.github.io/zh/tags/"
                 />
   </url><url>
     <loc>https://wumulong-469.github.io/zh/tags/css/</loc>
@@ -41,19 +92,6 @@
                 href="https://wumulong-469.github.io/zh/tags/html/"
                 />
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wumulong-469.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wumulong-469.github.io/zh/"
-                />
-  </url><url>
     <loc>https://wumulong-469.github.io/zh/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -80,19 +118,6 @@
                 href="https://wumulong-469.github.io/zh/posts/markdown-syntax/"
                 />
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/posts/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wumulong-469.github.io/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wumulong-469.github.io/zh/posts/"
-                />
-  </url><url>
     <loc>https://wumulong-469.github.io/zh/series/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -117,19 +142,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://wumulong-469.github.io/zh/categories/syntax/"
-                />
-  </url><url>
-    <loc>https://wumulong-469.github.io/zh/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wumulong-469.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wumulong-469.github.io/zh/tags/"
                 />
   </url><url>
     <loc>https://wumulong-469.github.io/zh/tags/themes/</loc>
