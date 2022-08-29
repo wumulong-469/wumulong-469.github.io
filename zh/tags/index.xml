@@ -7,6 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wumulong-469.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>linux</title>
+      <link>https://wumulong-469.github.io/zh/tags/linux/</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wumulong-469.github.io/zh/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opengl</title>
+      <link>https://wumulong-469.github.io/zh/tags/opengl/</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wumulong-469.github.io/zh/tags/opengl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>pkg</title>
       <link>https://wumulong-469.github.io/zh/tags/pkg/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
@@ -21,6 +39,15 @@
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wumulong-469.github.io/zh/tags/scoop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>turnip</title>
+      <link>https://wumulong-469.github.io/zh/tags/turnip/</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wumulong-469.github.io/zh/tags/turnip/</guid>
       <description></description>
     </item>
     

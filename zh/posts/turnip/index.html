@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Scoop使用教程 | Lelf &amp; Programe</title>
-<meta name="keywords" content="scoop, pkg" />
-<meta name="description" content="scoop的一个简单使用教程">
+<title>从捡垃圾到安装Turnip驱动安装和食用 | Lelf &amp; Programe</title>
+<meta name="keywords" content="opengl, linux, turnip" />
+<meta name="description" content="折腾日记">
 <meta name="author" content="wumulong">
-<link rel="canonical" href="https://wumulong-469.github.io/zh/posts/scoop/" />
+<link rel="canonical" href="https://wumulong-469.github.io/zh/posts/turnip/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.e85ad0406048e8176e1c7661b25d5c69297ddfe41dc4124cf75ecb99a4f7b3d1.js" integrity="sha256-6FrQQGBI6BduHHZhsl1caSl93&#43;QdxBJM917LmaT3s9E="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -21,7 +21,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.101.0" />
-<link rel="alternate" hreflang="zh" href="https://wumulong-469.github.io/zh/posts/scoop/" />
+<link rel="alternate" hreflang="zh" href="https://wumulong-469.github.io/zh/posts/turnip/" />
 <noscript>
     <style>
         #theme-toggle,
@@ -58,16 +58,16 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Scoop使用教程" />
-<meta property="og:description" content="scoop的一个简单使用教程" />
+</noscript><meta property="og:title" content="从捡垃圾到安装Turnip驱动安装和食用" />
+<meta property="og:description" content="折腾日记" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wumulong-469.github.io/zh/posts/scoop/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://wumulong-469.github.io/zh/posts/turnip/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-23T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2022-08-23T00:00:00&#43;00:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Scoop使用教程"/>
-<meta name="twitter:description" content="scoop的一个简单使用教程"/>
+<meta name="twitter:title" content="从捡垃圾到安装Turnip驱动安装和食用"/>
+<meta name="twitter:description" content="折腾日记"/>
 
 
 <script type="application/ld+json">
@@ -84,8 +84,8 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Scoop使用教程",
-      "item": "https://wumulong-469.github.io/zh/posts/scoop/"
+      "name": "从捡垃圾到安装Turnip驱动安装和食用",
+      "item": "https://wumulong-469.github.io/zh/posts/turnip/"
     }
   ]
 }
@@ -94,14 +94,14 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Scoop使用教程",
-  "name": "Scoop使用教程",
-  "description": "scoop的一个简单使用教程",
+  "headline": "从捡垃圾到安装Turnip驱动安装和食用",
+  "name": "从捡垃圾到安装Turnip驱动安装和食用",
+  "description": "折腾日记",
   "keywords": [
-    "scoop", "pkg"
+    "opengl", "linux", "turnip"
   ],
-  "articleBody": "论如何在国内环境下，如何优雅的使用scoop管理windows平台上工具的依赖和环境。让开发者无需担心的开发环境上的环境变量配置。\n关于Linux 和 Windows 的包管理。 在linux 下不同的发行版本通常携带不同的包管理器，比如redhat系的 yum ， debian下的apt ，arch 的 pacman 更或者是 alpine的 apk 。\n在windows 如今也加入与之类似的包管理工具 “winget” 。\n为啥选用scoop？ 首先windows 作为易用的图像化平台，还承载着大量娱乐方式。这是众多人即使有着linux忠实信徒，也并不愿意放弃windows的理由。但是我们可以取其精华取其糟粕使得自己获得更好的生活和开发体验。\n为啥不用原生的包管理 “winget” ： 默认安装路径并不明确，下载软件安装，你会得到不同的路径的安装结果。\n并不自动配置环境变量，或者链接文件。使得安装软件后你的自行搜索配置环境，加之第一条，你会迎来一个及其糟糕的体验。\n上架软件并没有进行精选筛选，下载安装的软件来路不明，而且winget声明并不对此负责。\n可以扩展的源少。\n正因为以上的缺点，winget并没有解决开发者的痛点。这使得我们转而使用scoop进行代替。\nScoop的安装 Scoop项目地址 Scoop安装地址 管理员模式安装: 打开你的powershell ， 然后键入： Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 这里选择 接受，再键入如下： iex \"\u0026 {$(irm get.scoop.sh)} -RunAsAdmin\" 如果你想只给本用户安装: 在上诉第一步的基础上替换第二步为： irm get.scoop.sh | iex 图片展示：\n这里因为本人scoop上装了很多的软件，而且没有调整目录，就不卸载scoop进行重装演示。\n这个时候可用scoop help 查看帮助了\nScoop的下载加速。 启用多线程下载：（基于国内的环境我建议先安装aria2） 下载scoop使用,\nscoop install aria2 配置 aria2\nscoop config aria2-max-connection-per-server 16\rscoop config aria2-split 16\rscoop config aria2-min-split-size 1M 图片展示： 为scoop添加源: 下载git添加源(因为bucket仓库在gtihub上，需要git拉取): 在下载的时候会装配置7zip.用与解压。所以不用担心。\nscoop install git 这里添加java的源，可以添加的源在scoop项目的readme上有建议和标注。\nscoop bucket add java 我们添加Orcle的的篮子,当然这里大概率因为国内的环境会添加失败。当然可以选择国内的gitee托管。:D\n解决方法很多，如果方法他开源，而且有人维护，可以长久使用，那是再好不过了。:P\n我用的解决方案是对自己合适的，只提供参考：\n我使用的是watt toolkit。 这样一款为的工具软件，他包含了github加速的功能，到目前还保证着纯净好使的特点。也不止是github的加速功能，还包含了一些平台的验证。本人爱玩一款名为elite dangerous的游戏，游戏数据查询网站的google验证也可被代理，等等。\n本片讨论的是scoop，这里就简单跳过了。\n用scoop安装openjdk 准备工作，源是否正常: 我们先查看是否成功添加源\nscoop bucket list 如果没有添加成功,再次删除和添加\nscoop bucket rm scoop bucket add 图片展示： 进行更新保证我们下载的软件是最新的: 更新本地缓存列表（其实不需要每次都更行，在隔时间scoop会在你安装软件前自动更新）\nscoop update 图片展示： 搜索openjdk,并安装: 搜索openjdk,可以看到有很多的版本可选安装，而且标注了来自的bucket\nscoop search openjdk 我们选择 openjdk11 安装 ，下载还是很给力，aria2跑满了我的200mbps的带宽。\nscoop install openjdk11 验证安装\njava -version 图片展示： 结束语 原来写blog这么累啊，写了一个小时，才挤了这么点牙膏。好难啊！！！",
-  "wordCount" : "141",
+  "articleBody": "在安卓上为chroot中的环境取得微小的OpenGL硬件加速效果，顺便记录下捡垃圾日记的折腾日记。\n背景 淘机经历 我在二手市场以300元的价格淘来个一台lg v50 tinq。战损橙色，卖家说是自行车碾过，还可以开机使用。我也不嫌弃，买来过来用来体验arm下的linux环境也不错。一体会下现代手机处理器的性能。\n着手刷机 手机到手，卖家已经是root过了。竟然root过了，那就换个系统把！通过XDA，我安装找到了 LineageOS 的安装包，而且附有内核的源码。（XDA教程和安装）。\n先通过magisk安装twrp。进入twrp，刷入zip，再刷入解锁data分区工具。有多年搞机经验刷机还算顺利。就是新机型的A/B分区和data加密机制让我重刷了2，3次才找到技巧。而且lg v50 thinq这台机器默认是不开放bootloader，只有再检测到内核损毁或与系统版本不一致才会跳转bootloader。那只有用破解的官方工具包刷个内核和系统不一致的版本，才可以进bootloader。如果早知道，就找个好刷的机器了。\n完成后我立即安装了自己添加了zstdcat的Linux Deploy ，这样就可以修复ubuntu22.04的安装。其实后来在LinuxDeploy项目的pr中才发现有人已经提交了请求，并且用他的复刻的代码编译即可用。LinuxDeploy项目地址\n使用linuxdeploy在自己手机上就可以简单的搭建一个类linux的环境了哈。\n开始Turnip教程 前言 如果你是linux新手，或者你一次看完教程还没有概念和逻辑，我不建议你投入太多时间。\n环境装备 建议系统版本，ubuntu22.04 , kali-rolling 。\n“目前\"我建议的mesa版本是20.0.5。因为这个mesa版本很新，所以建议用较新的系统编译，以免出现一系列的依赖问题。\nmesa20.0.5地址\n先下载mesa用unzip解压。进入目录.\nwget https://github.com/Mesa3D/mesa/archive/refs/tags/mesa-22.0.5.zip\runzip mesa-22.0.5.zip\rcd mesa-mesa-22.0.5 并安装编译工具，这里要段时间。\napt build-dep mesa 展示： 编译开始 加入编译条件，条件：\nmeson build -D platforms=x11,wayland -D gallium-drivers=swrast,virgl,zink -D vulkan-drivers=freedreno -D dri3=enabled -D egl=enabled -D gles2=enabled -D glvnd=true -D glx=dri -D libunwind=disabled -D osmesa=true -D shared-glapi=enabled -D microsoft-clc=disabled -D valgrind=disabled --prefix /usr -D gles1=disabled -D freedreno-kgsl=true 出自于：mesa-turnip-kgsl\n展示： 添加drm.h的目录,否则编译到一半会遇到找不到 drm.h。\nexport C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/libdrm/ 进入build目录,开始编译安装\ncd build\rninja install 等待编译完成。\n完成展示： 验证测试 逆向加速？ 我们可以用\nexport MESA_LOADER_DRIVER_OVERRIDE=zink\rexport GALLIUM_DRIVER=zink 来指定mesa是用zink驱动。\nexport MESA_LOADER_DRIVER_OVERRIDE=\rexport GALLIUM_DRIVER= 返回默认驱动,或者关了你的控制台。\n基础性能测试默认驱动：\n切换zink驱动： 好像还降速了？？？本人使用的骁龙855，经过一段时间探究，其实是万年羸弱的arm小核心导致。\n再次测试 这次我们让程序亲和大核心。\ntaskset -c 4-7 glxgears 基础性能测试默认驱动： 切换zink驱动： 这次可以看到明显的大约超约100帧，经过实测分辨率压力越大，加速效果越明显。\n较为简单的调优测试 我找到sys文件夹的cpu设备和gpu设备，把gpu最低频率拉高，并且cpu屏蔽小核心，调度器写userspace。\n做法这里详细我不叙述，而且可以找到教程。\n跑分没意思，chromium的使用 记得先指定zink驱动，再启动chromium。 如果你嫌麻烦可以把这2条写入 .bashrc 。\n地址栏输入\nchrome://flags 打开 重载设备列表，让chrome使用你这“莫名奇妙”得来的opengl硬件加速。\n查看自己的硬件信息\nchrome://gpu 结束语 折磨人的不仅有不断冒出的段错误还有高数。 ",
+  "wordCount" : "129",
   "inLanguage": "zh",
   "datePublished": "2022-08-23T00:00:00Z",
   "dateModified": "2022-08-23T00:00:00Z",
@@ -111,7 +111,7 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://wumulong-469.github.io/zh/posts/scoop/"
+    "@id": "https://wumulong-469.github.io/zh/posts/turnip/"
   },
   "publisher": {
     "@type": "Organization",
@@ -200,12 +200,12 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://wumulong-469.github.io/zh/">主页</a>&nbsp;»&nbsp;<a href="https://wumulong-469.github.io/zh/posts/">Posts</a></div>
     <h1 class="post-title">
-      Scoop使用教程
+      从捡垃圾到安装Turnip驱动安装和食用
     </h1>
     <div class="post-description">
-      scoop的一个简单使用教程
+      折腾日记
     </div>
-    <div class="post-meta"><span title='2022-08-23 00:00:00 +0000 UTC'>八月 23, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;wumulong&nbsp;|&nbsp;<a href="https://github.com/wumulong-469/markdownsouces/tree/main/posts/scoop/index.zh.md" rel="noopener noreferrer" target="_blank">Get Page souces</a>
+    <div class="post-meta"><span title='2022-08-23 00:00:00 +0000 UTC'>八月 23, 2022</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;wumulong&nbsp;|&nbsp;<a href="https://github.com/wumulong-469/markdownsouces/tree/main/posts/turnip/index.zh.md" rel="noopener noreferrer" target="_blank">Get Page souces</a>
 
 </div>
   </header> <div class="toc">
@@ -216,40 +216,34 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#%e5%85%b3%e4%ba%8elinux-%e5%92%8c-windows-%e7%9a%84%e5%8c%85%e7%ae%a1%e7%90%86" aria-label="关于Linux 和 Windows 的包管理。">关于Linux 和 Windows 的包管理。</a></li>
-                <li>
-                    <a href="#%e4%b8%ba%e5%95%a5%e9%80%89%e7%94%a8scoop" aria-label="为啥选用scoop？">为啥选用scoop？</a></li>
-                <li>
-                    <a href="#%e4%b8%ba%e5%95%a5%e4%b8%8d%e7%94%a8%e5%8e%9f%e7%94%9f%e7%9a%84%e5%8c%85%e7%ae%a1%e7%90%86-winget-" aria-label="为啥不用原生的包管理 “winget” ：">为啥不用原生的包管理 “winget” ：</a></li>
-                <li>
-                    <a href="#scoop%e7%9a%84%e5%ae%89%e8%a3%85" aria-label="Scoop的安装">Scoop的安装</a><ul>
+                    <a href="#%e8%83%8c%e6%99%af" aria-label="背景">背景</a><ul>
                         
                 <li>
-                    <a href="#%e7%ae%a1%e7%90%86%e5%91%98%e6%a8%a1%e5%bc%8f%e5%ae%89%e8%a3%85" aria-label="管理员模式安装:">管理员模式安装:</a></li>
+                    <a href="#%e6%b7%98%e6%9c%ba%e7%bb%8f%e5%8e%86" aria-label="淘机经历">淘机经历</a></li>
                 <li>
-                    <a href="#%e5%a6%82%e6%9e%9c%e4%bd%a0%e6%83%b3%e5%8f%aa%e7%bb%99%e6%9c%ac%e7%94%a8%e6%88%b7%e5%ae%89%e8%a3%85" aria-label="如果你想只给本用户安装:">如果你想只给本用户安装:</a></li></ul>
+                    <a href="#%e7%9d%80%e6%89%8b%e5%88%b7%e6%9c%ba" aria-label="着手刷机">着手刷机</a></li></ul>
                 </li>
                 <li>
-                    <a href="#scoop%e7%9a%84%e4%b8%8b%e8%bd%bd%e5%8a%a0%e9%80%9f" aria-label="Scoop的下载加速。">Scoop的下载加速。</a><ul>
+                    <a href="#%e5%bc%80%e5%a7%8bturnip%e6%95%99%e7%a8%8b" aria-label="开始Turnip教程">开始Turnip教程</a><ul>
                         
                 <li>
-                    <a href="#%e5%90%af%e7%94%a8%e5%a4%9a%e7%ba%bf%e7%a8%8b%e4%b8%8b%e8%bd%bd%e5%9f%ba%e4%ba%8e%e5%9b%bd%e5%86%85%e7%9a%84%e7%8e%af%e5%a2%83%e6%88%91%e5%bb%ba%e8%ae%ae%e5%85%88%e5%ae%89%e8%a3%85aria2" aria-label="启用多线程下载：（基于国内的环境我建议先安装aria2）">启用多线程下载：（基于国内的环境我建议先安装aria2）</a></li></ul>
+                    <a href="#%e5%89%8d%e8%a8%80" aria-label="前言">前言</a></li>
+                <li>
+                    <a href="#%e7%8e%af%e5%a2%83%e8%a3%85%e5%a4%87" aria-label="环境装备">环境装备</a></li>
+                <li>
+                    <a href="#%e7%bc%96%e8%af%91%e5%bc%80%e5%a7%8b" aria-label="编译开始">编译开始</a></li></ul>
                 </li>
                 <li>
-                    <a href="#%e4%b8%bascoop%e6%b7%bb%e5%8a%a0%e6%ba%90" aria-label="为scoop添加源:">为scoop添加源:</a><ul>
+                    <a href="#%e9%aa%8c%e8%af%81%e6%b5%8b%e8%af%95" aria-label="验证测试">验证测试</a><ul>
                         
                 <li>
-                    <a href="#%e4%b8%8b%e8%bd%bdgit%e6%b7%bb%e5%8a%a0%e6%ba%90%e5%9b%a0%e4%b8%babucket%e4%bb%93%e5%ba%93%e5%9c%a8gtihub%e4%b8%8a%e9%9c%80%e8%a6%81git%e6%8b%89%e5%8f%96" aria-label="下载git添加源(因为bucket仓库在gtihub上，需要git拉取):">下载git添加源(因为bucket仓库在gtihub上，需要git拉取):</a></li></ul>
-                </li>
+                    <a href="#%e9%80%86%e5%90%91%e5%8a%a0%e9%80%9f" aria-label="逆向加速？">逆向加速？</a></li>
                 <li>
-                    <a href="#%e7%94%a8scoop%e5%ae%89%e8%a3%85openjdk" aria-label="用scoop安装openjdk">用scoop安装openjdk</a><ul>
-                        
+                    <a href="#%e5%86%8d%e6%ac%a1%e6%b5%8b%e8%af%95" aria-label="再次测试">再次测试</a></li>
                 <li>
-                    <a href="#%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c%e6%ba%90%e6%98%af%e5%90%a6%e6%ad%a3%e5%b8%b8" aria-label="准备工作，源是否正常:">准备工作，源是否正常:</a></li>
+                    <a href="#%e8%be%83%e4%b8%ba%e7%ae%80%e5%8d%95%e7%9a%84%e8%b0%83%e4%bc%98%e6%b5%8b%e8%af%95" aria-label="较为简单的调优测试">较为简单的调优测试</a></li>
                 <li>
-                    <a href="#%e8%bf%9b%e8%a1%8c%e6%9b%b4%e6%96%b0%e4%bf%9d%e8%af%81%e6%88%91%e4%bb%ac%e4%b8%8b%e8%bd%bd%e7%9a%84%e8%bd%af%e4%bb%b6%e6%98%af%e6%9c%80%e6%96%b0%e7%9a%84" aria-label="进行更新保证我们下载的软件是最新的:">进行更新保证我们下载的软件是最新的:</a></li>
-                <li>
-                    <a href="#%e6%90%9c%e7%b4%a2openjdk%e5%b9%b6%e5%ae%89%e8%a3%85" aria-label="搜索openjdk,并安装:">搜索openjdk,并安装:</a></li></ul>
+                    <a href="#%e8%b7%91%e5%88%86%e6%b2%a1%e6%84%8f%e6%80%9dchromium%e7%9a%84%e4%bd%bf%e7%94%a8" aria-label="跑分没意思，chromium的使用">跑分没意思，chromium的使用</a></li></ul>
                 </li>
                 <li>
                     <a href="#%e7%bb%93%e6%9d%9f%e8%af%ad" aria-label="结束语">结束语</a>
@@ -259,195 +253,158 @@
     </details>
 </div>
 
-  <div class="post-content"><p>论如何在国内环境下，如何优雅的使用scoop管理windows平台上工具的依赖和环境。让开发者无需担心的开发环境上的环境变量配置。</p>
-<h2 id="关于linux-和-windows-的包管理">关于Linux 和 Windows 的包管理。<a hidden class="anchor" aria-hidden="true" href="#关于linux-和-windows-的包管理">#</a></h2>
-<p>在linux 下不同的发行版本通常携带不同的包管理器，比如redhat系的 yum ， debian下的apt ，arch 的 pacman 更或者是 alpine的 apk 。</p>
-<p>在windows 如今也加入与之类似的包管理工具 “winget” 。</p>
-<h2 id="为啥选用scoop">为啥选用scoop？<a hidden class="anchor" aria-hidden="true" href="#为啥选用scoop">#</a></h2>
-<p>首先windows 作为易用的图像化平台，还承载着大量娱乐方式。这是众多人即使有着linux忠实信徒，也并不愿意放弃windows的理由。但是我们可以取其精华取其糟粕使得自己获得更好的生活和开发体验。</p>
-<h2 id="为啥不用原生的包管理-winget-">为啥不用原生的包管理 “winget” ：<a hidden class="anchor" aria-hidden="true" href="#为啥不用原生的包管理-winget-">#</a></h2>
-<ol>
-<li>
-<p>默认安装路径并不明确，下载软件安装，你会得到不同的路径的安装结果。</p>
-</li>
-<li>
-<p>并不自动配置环境变量，或者链接文件。使得安装软件后你的自行搜索配置环境，加之第一条，你会迎来一个及其糟糕的体验。</p>
-</li>
-<li>
-<p>上架软件并没有进行精选筛选，下载安装的软件来路不明，而且winget声明并不对此负责。</p>
-</li>
-<li>
-<p>可以扩展的源少。</p>
-</li>
-</ol>
-<p><strong>正因为以上的缺点，winget并没有解决开发者的痛点。这使得我们转而使用scoop进行代替。</strong></p>
-<h2 id="scoop的安装">Scoop的安装<a hidden class="anchor" aria-hidden="true" href="#scoop的安装">#</a></h2>
-<ul>
-<li><a href="https://github.com/ScoopInstaller/Scoop">Scoop项目地址</a></li>
-<li><a href="https://github.com/ScoopInstaller/Install">Scoop安装地址</a></li>
-</ul>
-<h3 id="管理员模式安装">管理员模式安装:<a hidden class="anchor" aria-hidden="true" href="#管理员模式安装">#</a></h3>
-<blockquote>
-<ol>
-<li>打开你的powershell ， 然后键入：</li>
-</ol>
-<pre tabindex="0"><code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-</code></pre><ol start="2">
-<li>这里选择 接受，再键入如下：</li>
-</ol>
-<pre tabindex="0"><code>iex &#34;&amp; {$(irm get.scoop.sh)} -RunAsAdmin&#34;
-</code></pre></blockquote>
-<h3 id="如果你想只给本用户安装">如果你想只给本用户安装:<a hidden class="anchor" aria-hidden="true" href="#如果你想只给本用户安装">#</a></h3>
-<blockquote>
-<ol start="2">
-<li>在上诉第一步的基础上替换第二步为：</li>
-</ol>
-<pre tabindex="0"><code>irm get.scoop.sh | iex
-</code></pre></blockquote>
-<p><strong>图片展示：</strong></p>
-<blockquote>
-<p><img loading="lazy" src="./images/scoop-install.png" alt="scoop-install"  />
+  <div class="post-content"><p>在安卓上为chroot中的环境取得微小的OpenGL硬件加速效果，顺便记录下捡垃圾日记的折腾日记。</p>
+<h2 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h2>
+<h3 id="淘机经历">淘机经历<a hidden class="anchor" aria-hidden="true" href="#淘机经历">#</a></h3>
+<p>我在二手市场以300元的价格淘来个一台lg v50 tinq。战损橙色，卖家说是自行车碾过，还可以开机使用。我也不嫌弃，买来过来用来体验arm下的linux环境也不错。一体会下现代手机处理器的性能。</p>
+<h3 id="着手刷机">着手刷机<a hidden class="anchor" aria-hidden="true" href="#着手刷机">#</a></h3>
+<p>手机到手，卖家已经是root过了。竟然root过了，那就换个系统把！通过XDA，我安装找到了 LineageOS 的安装包，而且附有内核的源码。（<a href="https://forum.xda-developers.com/t/android-11-0-0-unofficial-lineageos-18-1-lg-v50-flashlm-flashlmdd.4161519/">XDA教程和安装</a>）。</p>
+<p>先通过magisk安装twrp。进入twrp，刷入zip，再刷入解锁data分区工具。有多年搞机经验刷机还算顺利。就是新机型的A/B分区和data加密机制让我重刷了2，3次才找到技巧。而且lg v50 thinq这台机器默认是不开放bootloader，只有再检测到内核损毁或与系统版本不一致才会跳转bootloader。那只有用破解的官方工具包刷个内核和系统不一致的版本，才可以进bootloader。如果早知道，就找个好刷的机器了。</p>
+<p>完成后我立即安装了自己添加了zstdcat的Linux Deploy ，这样就可以修复ubuntu22.04的安装。其实后来在LinuxDeploy项目的pr中才发现有人已经提交了请求，并且用他的复刻的代码编译即可用。<a href="https://github.com/meefik/linuxdeploy">LinuxDeploy项目地址</a></p>
+<p>使用linuxdeploy在自己手机上就可以简单的搭建一个类linux的环境了哈。</p>
+<h2 id="开始turnip教程">开始Turnip教程<a hidden class="anchor" aria-hidden="true" href="#开始turnip教程">#</a></h2>
+<h3 id="前言">前言<a hidden class="anchor" aria-hidden="true" href="#前言">#</a></h3>
+<p>如果你是linux新手，或者你一次看完教程还没有概念和逻辑，我不建议你投入太多时间。</p>
+<h3 id="环境装备">环境装备<a hidden class="anchor" aria-hidden="true" href="#环境装备">#</a></h3>
+<p>建议系统版本，ubuntu22.04 , kali-rolling 。</p>
+<p>&ldquo;目前&quot;我建议的mesa版本是20.0.5。因为这个mesa版本很新，所以建议用较新的系统编译，以免出现一系列的依赖问题。</p>
+<p><a href="https://github.com/Mesa3D/mesa/tree/mesa-22.0.5">mesa20.0.5地址</a></p>
+<p>先下载mesa用unzip解压。进入目录.</p>
+<pre tabindex="0"><code>wget https://github.com/Mesa3D/mesa/archive/refs/tags/mesa-22.0.5.zip
+unzip mesa-22.0.5.zip
+cd mesa-mesa-22.0.5
+</code></pre><p>并安装编译工具，这里要段时间。</p>
+<pre tabindex="0"><code>apt build-dep mesa
+</code></pre><p>展示：
+<img loading="lazy" src="./images/env-prepare.png" alt="环境准备"  />
 </p>
-</blockquote>
-<ul>
-<li>
-<p>这里因为本人scoop上装了很多的软件，而且没有调整目录，就不卸载scoop进行重装演示。</p>
-</li>
-<li>
-<p>这个时候可用scoop help 查看帮助了</p>
-</li>
-</ul>
-<blockquote>
-<p><img loading="lazy" src="./images/scoop-help.png" alt="scoop-help"  />
+<h3 id="编译开始">编译开始<a hidden class="anchor" aria-hidden="true" href="#编译开始">#</a></h3>
+<p>加入编译条件，条件：</p>
+<pre tabindex="0"><code>meson build -D platforms=x11,wayland -D gallium-drivers=swrast,virgl,zink -D vulkan-drivers=freedreno -D dri3=enabled  -D egl=enabled  -D gles2=enabled -D glvnd=true -D glx=dri  -D libunwind=disabled -D osmesa=true  -D shared-glapi=enabled -D microsoft-clc=disabled  -D valgrind=disabled --prefix /usr -D gles1=disabled -D freedreno-kgsl=true
+</code></pre><p>出自于：<a href="https://github.com/Grima04/mesa-turnip-kgsl">mesa-turnip-kgsl</a></p>
+<p>展示：
+<img loading="lazy" src="./images/pkg-mesa.png" alt="编译条件"  />
 </p>
-</blockquote>
-<h2 id="scoop的下载加速">Scoop的下载加速。<a hidden class="anchor" aria-hidden="true" href="#scoop的下载加速">#</a></h2>
-<h3 id="启用多线程下载基于国内的环境我建议先安装aria2">启用多线程下载：（基于国内的环境我建议先安装aria2）<a hidden class="anchor" aria-hidden="true" href="#启用多线程下载基于国内的环境我建议先安装aria2">#</a></h3>
-<blockquote>
-<p>下载scoop使用,</p>
-<pre tabindex="0"><code>scoop install aria2
-</code></pre><p>配置 aria2</p>
-<pre tabindex="0"><code>scoop config aria2-max-connection-per-server 16
-scoop config aria2-split 16
-scoop config aria2-min-split-size 1M
-</code></pre><p>图片展示：
-<img loading="lazy" src="./images/install-aria2.png" alt="install-aria2"  />
+<p>添加drm.h的目录,否则编译到一半会遇到找不到 drm.h。</p>
+<pre tabindex="0"><code>export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/libdrm/
+</code></pre><p>进入build目录,开始编译安装</p>
+<pre tabindex="0"><code>cd build
+ninja install
+</code></pre><p><img loading="lazy" src="./images/build-mesa.png" alt="编译条件"  />
 </p>
-</blockquote>
-<h2 id="为scoop添加源">为scoop添加源:<a hidden class="anchor" aria-hidden="true" href="#为scoop添加源">#</a></h2>
-<h3 id="下载git添加源因为bucket仓库在gtihub上需要git拉取">下载git添加源(因为bucket仓库在gtihub上，需要git拉取):<a hidden class="anchor" aria-hidden="true" href="#下载git添加源因为bucket仓库在gtihub上需要git拉取">#</a></h3>
-<blockquote>
-<p>在下载的时候会装配置7zip.用与解压。所以不用担心。</p>
-<pre tabindex="0"><code>scoop install git
-</code></pre><p>这里添加java的源，可以添加的源在scoop项目的<strong>readme</strong>上有建议和标注。</p>
-<pre tabindex="0"><code>scoop bucket add java
-</code></pre></blockquote>
-<ul>
-<li>
-<p>我们添加Orcle的的篮子,当然这里大概率因为国内的环境会添加失败。当然可以选择国内的gitee托管。:D</p>
-</li>
-<li>
-<p>解决方法很多，如果方法他开源，而且有人维护，可以长久使用，那是再好不过了。:P</p>
-</li>
-</ul>
-<p><strong>我用的解决方案是对自己合适的，只提供参考：</strong></p>
-<ul>
-<li>
-<p>我使用的是<a href="%22https://github.com/BeyondDimension/SteamTools">watt toolkit</a>。 这样一款为的工具软件，他包含了github加速的功能，到目前还保证着纯净好使的特点。也不止是github的加速功能，还包含了一些平台的验证。本人爱玩一款名为<strong>elite dangerous</strong>的游戏，游戏数据查询网站的google验证也可被代理，等等。</p>
-</li>
-<li>
-<p>本片讨论的是scoop，这里就简单跳过了。</p>
-</li>
-</ul>
-<h2 id="用scoop安装openjdk">用scoop安装openjdk<a hidden class="anchor" aria-hidden="true" href="#用scoop安装openjdk">#</a></h2>
-<h3 id="准备工作源是否正常">准备工作，源是否正常:<a hidden class="anchor" aria-hidden="true" href="#准备工作源是否正常">#</a></h3>
-<blockquote>
-<p>我们先查看是否成功添加源</p>
-<pre tabindex="0"><code>scoop bucket list
-</code></pre><p>如果没有添加成功,再次删除和添加</p>
-<pre tabindex="0"><code>scoop bucket rm &lt;bucket-name&gt; 
-scoop bucket add &lt;bucket-name&gt;
-</code></pre><p>图片展示：
-<img loading="lazy" src="./images/bucket-list.png" alt="bucket-list"  />
+<p>等待编译完成。</p>
+<p>完成展示：
+<img loading="lazy" src="./images/installed-mesa.png" alt="完成编译"  />
 </p>
-</blockquote>
-<h3 id="进行更新保证我们下载的软件是最新的">进行更新保证我们下载的软件是最新的:<a hidden class="anchor" aria-hidden="true" href="#进行更新保证我们下载的软件是最新的">#</a></h3>
-<blockquote>
-<p>更新本地缓存列表（其实不需要每次都更行，在隔时间scoop会在你安装软件前自动更新）</p>
-<pre tabindex="0"><code>scoop update
-</code></pre><p>图片展示：
-<img loading="lazy" src="./images/scoop-update.png" alt="scoop-update"  />
+<h2 id="验证测试">验证测试<a hidden class="anchor" aria-hidden="true" href="#验证测试">#</a></h2>
+<h3 id="逆向加速">逆向加速？<a hidden class="anchor" aria-hidden="true" href="#逆向加速">#</a></h3>
+<p>我们可以用</p>
+<pre tabindex="0"><code>export MESA_LOADER_DRIVER_OVERRIDE=zink
+export GALLIUM_DRIVER=zink
+</code></pre><p>来指定mesa是用zink驱动。</p>
+<pre tabindex="0"><code>export MESA_LOADER_DRIVER_OVERRIDE=
+export GALLIUM_DRIVER=
+</code></pre><p>返回默认驱动,或者关了你的控制台。</p>
+<p>基础性能测试默认驱动：</p>
+<p><img loading="lazy" src="./images/norm-gpu.png" alt="默认驱动"  />
 </p>
-</blockquote>
-<h3 id="搜索openjdk并安装">搜索openjdk,并安装:<a hidden class="anchor" aria-hidden="true" href="#搜索openjdk并安装">#</a></h3>
-<blockquote>
-<p>搜索openjdk,可以看到有很多的版本可选安装，而且标注了来自的bucket</p>
-<pre tabindex="0"><code>scoop search openjdk
-</code></pre><p>我们选择 openjdk11 安装 ，下载还是很给力，aria2跑满了我的200mbps的带宽。</p>
-<pre tabindex="0"><code>scoop install openjdk11
-</code></pre><p>验证安装</p>
-<pre tabindex="0"><code>java -version
-</code></pre><p>图片展示：
-<img loading="lazy" src="./images/install-openjdk11.png" alt="install-openjdk11"  />
+<p>切换zink驱动：
+<img loading="lazy" src="./images/zink-gpu.png" alt="zink驱动"  />
 </p>
-</blockquote>
+<p>好像还降速了？？？本人使用的<strong>骁龙855</strong>，经过一段时间探究，其实是万年羸弱的arm小核心导致。</p>
+<h3 id="再次测试">再次测试<a hidden class="anchor" aria-hidden="true" href="#再次测试">#</a></h3>
+<p>这次我们让程序亲和大核心。</p>
+<pre tabindex="0"><code>taskset -c 4-7 glxgears
+</code></pre><p>基础性能测试默认驱动：
+<img loading="lazy" src="./images/mix-norm-mesa.png" alt="默认驱动"  />
+</p>
+<p>切换zink驱动：
+<img loading="lazy" src="./images/mix-zink-mesa.png" alt="zink驱动"  />
+</p>
+<p>这次可以看到明显的大约超约100帧，经过实测分辨率压力越大，加速效果越明显。</p>
+<h3 id="较为简单的调优测试">较为简单的调优测试<a hidden class="anchor" aria-hidden="true" href="#较为简单的调优测试">#</a></h3>
+<p>我找到sys文件夹的cpu设备和gpu设备，把gpu最低频率拉高，并且cpu屏蔽小核心，调度器写userspace。</p>
+<p>做法这里详细我不叙述，而且可以找到教程。</p>
+<p><img loading="lazy" src="./images/max-zink-mesa.png" alt="zink调优测试"  />
+</p>
+<p><img loading="lazy" src="./images/max-zink-mark2.png" alt="zink调优测试"  />
+</p>
+<h3 id="跑分没意思chromium的使用">跑分没意思，chromium的使用<a hidden class="anchor" aria-hidden="true" href="#跑分没意思chromium的使用">#</a></h3>
+<p>记得先指定zink驱动，再启动chromium。
+如果你嫌麻烦可以把这2条写入 .bashrc 。</p>
+<p>地址栏输入</p>
+<pre tabindex="0"><code>chrome://flags
+</code></pre><p>打开 重载设备列表，让chrome使用你这“莫名奇妙”得来的opengl硬件加速。</p>
+<p><img loading="lazy" src="./images/over-zink-chrome.png" alt="重载列表"  />
+</p>
+<p>查看自己的硬件信息</p>
+<pre tabindex="0"><code>chrome://gpu
+</code></pre><p><img loading="lazy" src="./images/chrome-gpu-list.png" alt="查看信息"  />
+</p>
 <h2 id="结束语">结束语<a hidden class="anchor" aria-hidden="true" href="#结束语">#</a></h2>
-<pre><code>原来写blog这么累啊，写了一个小时，才挤了这么点牙膏。好难啊！！！</code></pre>
+<pre tabindex="0"><code>折磨人的不仅有不断冒出的段错误还有高数。
+</code></pre>
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://wumulong-469.github.io/zh/tags/scoop/">scoop</a></li>
-      <li><a href="https://wumulong-469.github.io/zh/tags/pkg/">pkg</a></li>
+      <li><a href="https://wumulong-469.github.io/zh/tags/opengl/">opengl</a></li>
+      <li><a href="https://wumulong-469.github.io/zh/tags/linux/">linux</a></li>
+      <li><a href="https://wumulong-469.github.io/zh/tags/turnip/">turnip</a></li>
     </ul>
 <nav class="paginav">
-  <a class="next" href="https://wumulong-469.github.io/zh/posts/turnip/">
+  <a class="prev" href="https://wumulong-469.github.io/zh/posts/scoop/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>Scoop使用教程</span>
+  </a>
+  <a class="next" href="https://wumulong-469.github.io/zh/posts/markdown-syntax/">
     <span class="title">下一页 »</span>
     <br>
-    <span>从捡垃圾到安装Turnip驱动安装和食用</span>
+    <span>Markdown Syntax Guide</span>
   </a>
 </nav>
 
 
 <div class="share-buttons">
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Scoop使用教程 on twitter"
-        href="https://twitter.com/intent/tweet/?text=Scoop%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b&amp;url=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fscoop%2f&amp;hashtags=scoop%2cpkg">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 从捡垃圾到安装Turnip驱动安装和食用 on twitter"
+        href="https://twitter.com/intent/tweet/?text=%e4%bb%8e%e6%8d%a1%e5%9e%83%e5%9c%be%e5%88%b0%e5%ae%89%e8%a3%85Turnip%e9%a9%b1%e5%8a%a8%e5%ae%89%e8%a3%85%e5%92%8c%e9%a3%9f%e7%94%a8&amp;url=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fturnip%2f&amp;hashtags=opengl%2clinux%2cturnip">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Scoop使用教程 on linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fscoop%2f&amp;title=Scoop%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b&amp;summary=Scoop%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b&amp;source=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fscoop%2f">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 从捡垃圾到安装Turnip驱动安装和食用 on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fturnip%2f&amp;title=%e4%bb%8e%e6%8d%a1%e5%9e%83%e5%9c%be%e5%88%b0%e5%ae%89%e8%a3%85Turnip%e9%a9%b1%e5%8a%a8%e5%ae%89%e8%a3%85%e5%92%8c%e9%a3%9f%e7%94%a8&amp;summary=%e4%bb%8e%e6%8d%a1%e5%9e%83%e5%9c%be%e5%88%b0%e5%ae%89%e8%a3%85Turnip%e9%a9%b1%e5%8a%a8%e5%ae%89%e8%a3%85%e5%92%8c%e9%a3%9f%e7%94%a8&amp;source=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fturnip%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Scoop使用教程 on reddit"
-        href="https://reddit.com/submit?url=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fscoop%2f&title=Scoop%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 从捡垃圾到安装Turnip驱动安装和食用 on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fturnip%2f&title=%e4%bb%8e%e6%8d%a1%e5%9e%83%e5%9c%be%e5%88%b0%e5%ae%89%e8%a3%85Turnip%e9%a9%b1%e5%8a%a8%e5%ae%89%e8%a3%85%e5%92%8c%e9%a3%9f%e7%94%a8">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Scoop使用教程 on facebook"
-        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fscoop%2f">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 从捡垃圾到安装Turnip驱动安装和食用 on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fturnip%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Scoop使用教程 on whatsapp"
-        href="https://api.whatsapp.com/send?text=Scoop%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b%20-%20https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fscoop%2f">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 从捡垃圾到安装Turnip驱动安装和食用 on whatsapp"
+        href="https://api.whatsapp.com/send?text=%e4%bb%8e%e6%8d%a1%e5%9e%83%e5%9c%be%e5%88%b0%e5%ae%89%e8%a3%85Turnip%e9%a9%b1%e5%8a%a8%e5%ae%89%e8%a3%85%e5%92%8c%e9%a3%9f%e7%94%a8%20-%20https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fturnip%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Scoop使用教程 on telegram"
-        href="https://telegram.me/share/url?text=Scoop%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b&amp;url=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fscoop%2f">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 从捡垃圾到安装Turnip驱动安装和食用 on telegram"
+        href="https://telegram.me/share/url?text=%e4%bb%8e%e6%8d%a1%e5%9e%83%e5%9c%be%e5%88%b0%e5%ae%89%e8%a3%85Turnip%e9%a9%b1%e5%8a%a8%e5%ae%89%e8%a3%85%e5%92%8c%e9%a3%9f%e7%94%a8&amp;url=https%3a%2f%2fwumulong-469.github.io%2fzh%2fposts%2fturnip%2f">
         <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
             <path
                 d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
