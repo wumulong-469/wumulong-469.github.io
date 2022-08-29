@@ -100,8 +100,8 @@
   "keywords": [
     "opengl", "linux", "turnip"
   ],
-  "articleBody": "在安卓上为chroot中的环境取得微小的OpenGL硬件加速效果，顺便记录下捡垃圾日记的折腾日记。\n背景 淘机经历 我在二手市场以300元的价格淘来个一台lg v50 tinq。战损橙色，卖家说是自行车碾过，还可以开机使用。我也不嫌弃，买来过来用来体验arm下的linux环境也不错。一体会下现代手机处理器的性能。\n着手刷机 手机到手，卖家已经是root过了。竟然root过了，那就换个系统把！通过XDA，我安装找到了 LineageOS 的安装包，而且附有内核的源码。（XDA教程和安装）。\n先通过magisk安装twrp。进入twrp，刷入zip，再刷入解锁data分区工具。有多年搞机经验刷机还算顺利。就是新机型的A/B分区和data加密机制让我重刷了2，3次才找到技巧。而且lg v50 thinq这台机器默认是不开放bootloader，只有再检测到内核损毁或与系统版本不一致才会跳转bootloader。那只有用破解的官方工具包刷个内核和系统不一致的版本，才可以进bootloader。如果早知道，就找个好刷的机器了。\n完成后我立即安装了自己添加了zstdcat的Linux Deploy ，这样就可以修复ubuntu22.04的安装。其实后来在LinuxDeploy项目的pr中才发现有人已经提交了请求，并且用他的复刻的代码编译即可用。LinuxDeploy项目地址\n使用linuxdeploy在自己手机上就可以简单的搭建一个类linux的环境了哈。\n开始Turnip教程 前言 如果你是linux新手，或者你一次看完教程还没有概念和逻辑，我不建议你投入太多时间。\n环境装备 建议系统版本，ubuntu22.04 , kali-rolling 。\n“目前\"我建议的mesa版本是20.0.5。因为这个mesa版本很新，所以建议用较新的系统编译，以免出现一系列的依赖问题。\nmesa20.0.5地址\n先下载mesa用unzip解压。进入目录.\nwget https://github.com/Mesa3D/mesa/archive/refs/tags/mesa-22.0.5.zip\runzip mesa-22.0.5.zip\rcd mesa-mesa-22.0.5 并安装编译工具，这里要段时间。\napt build-dep mesa 展示： 编译开始 加入编译条件，条件：\nmeson build -D platforms=x11,wayland -D gallium-drivers=swrast,virgl,zink -D vulkan-drivers=freedreno -D dri3=enabled -D egl=enabled -D gles2=enabled -D glvnd=true -D glx=dri -D libunwind=disabled -D osmesa=true -D shared-glapi=enabled -D microsoft-clc=disabled -D valgrind=disabled --prefix /usr -D gles1=disabled -D freedreno-kgsl=true 出自于：mesa-turnip-kgsl\n展示： 添加drm.h的目录,否则编译到一半会遇到找不到 drm.h。\nexport C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/libdrm/ 进入build目录,开始编译安装\ncd build\rninja install 等待编译完成。\n完成展示： 验证测试 逆向加速？ 我们可以用\nexport MESA_LOADER_DRIVER_OVERRIDE=zink\rexport GALLIUM_DRIVER=zink 来指定mesa是用zink驱动。\nexport MESA_LOADER_DRIVER_OVERRIDE=\rexport GALLIUM_DRIVER= 返回默认驱动,或者关了你的控制台。\n基础性能测试默认驱动：\n切换zink驱动： 好像还降速了？？？本人使用的骁龙855，经过一段时间探究，其实是万年羸弱的arm小核心导致。\n再次测试 这次我们让程序亲和大核心。\ntaskset -c 4-7 glxgears 基础性能测试默认驱动： 切换zink驱动： 这次可以看到明显的大约超约100帧，经过实测分辨率压力越大，加速效果越明显。\n较为简单的调优测试 我找到sys文件夹的cpu设备和gpu设备，把gpu最低频率拉高，并且cpu屏蔽小核心，调度器写userspace。\n做法这里详细我不叙述，而且可以找到教程。\n跑分没意思，chromium的使用 记得先指定zink驱动，再启动chromium。 如果你嫌麻烦可以把这2条写入 .bashrc 。\n地址栏输入\nchrome://flags 打开 重载设备列表，让chrome使用你这“莫名奇妙”得来的opengl硬件加速。\n查看自己的硬件信息\nchrome://gpu 结束语 折磨人的不仅有不断冒出的段错误还有高数。 ",
-  "wordCount" : "129",
+  "articleBody": "在安卓上为chroot中的环境取得微小的OpenGL硬件加速效果，顺便记录下捡垃圾日记的折腾日记。\n背景 淘机经历 我在二手市场以300元的价格淘来个一台lg v50 tinq。战损橙色，卖家说是自行车碾过，还可以开机使用。我也不嫌弃，买来过来用来体验arm下的linux环境也不错。一体会下现代手机处理器的性能。\n着手刷机 手机到手，卖家已经是root过了。竟然root过了，那就换个系统把！通过XDA，我安装找到了 LineageOS 的安装包，而且附有内核的源码。（XDA教程和安装）。\n先通过magisk安装twrp。进入twrp，刷入zip，再刷入解锁data分区工具。有多年搞机经验刷机还算顺利。就是新机型的A/B分区和data加密机制让我重刷了2，3次才找到技巧。而且lg v50 thinq这台机器默认是不开放bootloader，只有再检测到内核损毁或与系统版本不一致才会跳转bootloader。那只有用破解的官方工具包刷个内核和系统不一致的版本，才可以进bootloader。如果早知道，就找个好刷的机器了。\n完成后我立即安装了自己添加了zstdcat的Linux Deploy ，这样就可以修复ubuntu22.04的安装。其实后来在LinuxDeploy项目的pr中才发现有人已经提交了请求，并且用他的复刻的代码编译即可用（哎呀，白干了）。LinuxDeploy项目地址\n使用linuxdeploy在自己手机上就可以简单的搭建一个类linux的环境了哈。\n开始安装Turnip 环境装备 建议系统版本，ubuntu22.04 , kali-rolling 。\n“目前\"我建议的mesa版本是20.0.5。因为这个mesa版本很新，所以建议用较新的系统编译，以免出现一系列的依赖问题。\nmesa20.0.5地址\n先下载mesa用unzip解压。进入目录.\nwget https://github.com/Mesa3D/mesa/archive/refs/tags/mesa-22.0.5.zip\runzip mesa-22.0.5.zip\rcd mesa-mesa-22.0.5 并安装编译工具，这里要段时间。\napt build-dep mesa 展示： 编译开始 加入编译条件，条件：\nmeson build -D platforms=x11,wayland -D gallium-drivers=swrast,virgl,zink -D vulkan-drivers=freedreno -D dri3=enabled -D egl=enabled -D gles2=enabled -D glvnd=true -D glx=dri -D libunwind=disabled -D osmesa=true -D shared-glapi=enabled -D microsoft-clc=disabled -D valgrind=disabled --prefix /usr -D gles1=disabled -D freedreno-kgsl=true 出自于：mesa-turnip-kgsl\n展示： 添加drm.h的目录,否则编译到一半会遇到找不到 drm.h。\nexport C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/libdrm/ 进入build目录,开始编译安装\ncd build\rninja install 等待编译完成。\n完成展示： 验证测试 逆向加速？ 我们可以用\nexport MESA_LOADER_DRIVER_OVERRIDE=zink\rexport GALLIUM_DRIVER=zink 来指定mesa是用zink驱动。\nexport MESA_LOADER_DRIVER_OVERRIDE=\rexport GALLIUM_DRIVER= 返回默认驱动,或者关了你的控制台。\n基础性能测试默认驱动：\n切换zink驱动： 好像还降速了？？？本人使用的骁龙855，经过一段时间探究，其实是万年羸弱的arm小核心导致。\n再次测试 这次我们让程序亲和大核心。\ntaskset -c 4-7 glxgears 基础性能测试默认驱动： 切换zink驱动： 这次可以看到明显的大约超约100帧，经过实测分辨率压力越大，加速效果越明显。\n较为简单的调优测试 我找到sys文件夹的cpu设备和gpu设备，把gpu最低频率拉高，并且cpu屏蔽小核心，调度器写userspace。\n跑分没意思，chromium的使用 记得先指定zink驱动，再启动chromium。 如果你嫌麻烦可以把这2条写入 .bashrc 。\n地址栏输入\nchrome://flags 打开 重载设备列表，让chrome使用你这“莫名奇妙”得来的opengl硬件加速。\n查看自己的硬件信息\nchrome://gpu 结束语 折磨人的不仅有不断冒出的段错误还有高数。 ",
+  "wordCount" : "126",
   "inLanguage": "zh",
   "datePublished": "2022-08-23T00:00:00Z",
   "dateModified": "2022-08-23T00:00:00Z",
@@ -224,10 +224,8 @@
                     <a href="#%e7%9d%80%e6%89%8b%e5%88%b7%e6%9c%ba" aria-label="着手刷机">着手刷机</a></li></ul>
                 </li>
                 <li>
-                    <a href="#%e5%bc%80%e5%a7%8bturnip%e6%95%99%e7%a8%8b" aria-label="开始Turnip教程">开始Turnip教程</a><ul>
+                    <a href="#%e5%bc%80%e5%a7%8b%e5%ae%89%e8%a3%85turnip" aria-label="开始安装Turnip">开始安装Turnip</a><ul>
                         
-                <li>
-                    <a href="#%e5%89%8d%e8%a8%80" aria-label="前言">前言</a></li>
                 <li>
                     <a href="#%e7%8e%af%e5%a2%83%e8%a3%85%e5%a4%87" aria-label="环境装备">环境装备</a></li>
                 <li>
@@ -260,11 +258,9 @@
 <h3 id="着手刷机">着手刷机<a hidden class="anchor" aria-hidden="true" href="#着手刷机">#</a></h3>
 <p>手机到手，卖家已经是root过了。竟然root过了，那就换个系统把！通过XDA，我安装找到了 LineageOS 的安装包，而且附有内核的源码。（<a href="https://forum.xda-developers.com/t/android-11-0-0-unofficial-lineageos-18-1-lg-v50-flashlm-flashlmdd.4161519/">XDA教程和安装</a>）。</p>
 <p>先通过magisk安装twrp。进入twrp，刷入zip，再刷入解锁data分区工具。有多年搞机经验刷机还算顺利。就是新机型的A/B分区和data加密机制让我重刷了2，3次才找到技巧。而且lg v50 thinq这台机器默认是不开放bootloader，只有再检测到内核损毁或与系统版本不一致才会跳转bootloader。那只有用破解的官方工具包刷个内核和系统不一致的版本，才可以进bootloader。如果早知道，就找个好刷的机器了。</p>
-<p>完成后我立即安装了自己添加了zstdcat的Linux Deploy ，这样就可以修复ubuntu22.04的安装。其实后来在LinuxDeploy项目的pr中才发现有人已经提交了请求，并且用他的复刻的代码编译即可用。<a href="https://github.com/meefik/linuxdeploy">LinuxDeploy项目地址</a></p>
+<p>完成后我立即安装了自己添加了zstdcat的Linux Deploy ，这样就可以修复ubuntu22.04的安装。其实后来在LinuxDeploy项目的pr中才发现有人已经提交了请求，并且用他的复刻的代码编译即可用（哎呀，白干了）。<a href="https://github.com/meefik/linuxdeploy">LinuxDeploy项目地址</a></p>
 <p>使用linuxdeploy在自己手机上就可以简单的搭建一个类linux的环境了哈。</p>
-<h2 id="开始turnip教程">开始Turnip教程<a hidden class="anchor" aria-hidden="true" href="#开始turnip教程">#</a></h2>
-<h3 id="前言">前言<a hidden class="anchor" aria-hidden="true" href="#前言">#</a></h3>
-<p>如果你是linux新手，或者你一次看完教程还没有概念和逻辑，我不建议你投入太多时间。</p>
+<h2 id="开始安装turnip">开始安装Turnip<a hidden class="anchor" aria-hidden="true" href="#开始安装turnip">#</a></h2>
 <h3 id="环境装备">环境装备<a hidden class="anchor" aria-hidden="true" href="#环境装备">#</a></h3>
 <p>建议系统版本，ubuntu22.04 , kali-rolling 。</p>
 <p>&ldquo;目前&quot;我建议的mesa版本是20.0.5。因为这个mesa版本很新，所以建议用较新的系统编译，以免出现一系列的依赖问题。</p>
@@ -324,7 +320,6 @@ export GALLIUM_DRIVER=
 <p>这次可以看到明显的大约超约100帧，经过实测分辨率压力越大，加速效果越明显。</p>
 <h3 id="较为简单的调优测试">较为简单的调优测试<a hidden class="anchor" aria-hidden="true" href="#较为简单的调优测试">#</a></h3>
 <p>我找到sys文件夹的cpu设备和gpu设备，把gpu最低频率拉高，并且cpu屏蔽小核心，调度器写userspace。</p>
-<p>做法这里详细我不叙述，而且可以找到教程。</p>
 <p><img loading="lazy" src="./images/max-zink-mesa.png" alt="zink调优测试"  />
 </p>
 <p><img loading="lazy" src="./images/max-zink-mark2.png" alt="zink调优测试"  />
@@ -357,12 +352,7 @@ export GALLIUM_DRIVER=
   <a class="prev" href="https://wumulong-469.github.io/zh/posts/scoop/">
     <span class="title">« 上一页</span>
     <br>
-    <span>Scoop使用教程</span>
-  </a>
-  <a class="next" href="https://wumulong-469.github.io/zh/posts/markdown-syntax/">
-    <span class="title">下一页 »</span>
-    <br>
-    <span>Markdown Syntax Guide</span>
+    <span>Scoop简单使用</span>
   </a>
 </nav>
 
