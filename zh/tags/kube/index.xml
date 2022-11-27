@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kube on Live &amp; Programe</title>
+    <link>http://page.wumulong.space/zh/tags/kube/</link>
+    <description>Recent content in kube on Live &amp; Programe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://page.wumulong.space/zh/tags/kube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>简单把玩下k8s</title>
+      <link>http://page.wumulong.space/zh/posts/k8s/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://page.wumulong.space/zh/posts/k8s/</guid>
+      <description>听说k8s很火</description>
+    </item>
+    
+  </channel>
+</rss>

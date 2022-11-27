@@ -2,118 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wumulong-469.github.io/zh/tags/blog/</loc>
-    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wumulong-469.github.io/zh/categories/</loc>
-    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
+    <loc>http://page.wumulong.space/zh/categories/</loc>
+    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wumulong-469.github.io/categories/"
+                href="http://page.wumulong.space/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wumulong-469.github.io/zh/categories/"
+                href="http://page.wumulong.space/zh/categories/"
                 />
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/categories/life/</loc>
-    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
+    <loc>http://page.wumulong.space/zh/tags/containerd/</loc>
+    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/</loc>
-    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
+    <loc>http://page.wumulong.space/zh/categories/devlopment-env/</loc>
+    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://page.wumulong.space/zh/tags/kube/</loc>
+    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://page.wumulong.space/zh/</loc>
+    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wumulong-469.github.io/"
+                href="http://page.wumulong.space/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wumulong-469.github.io/zh/"
+                href="http://page.wumulong.space/zh/"
                 />
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/tags/page/</loc>
-    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
+    <loc>http://page.wumulong.space/zh/posts/</loc>
+    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/posts/</loc>
-    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wumulong-469.github.io/zh/tags/</loc>
-    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
+    <loc>http://page.wumulong.space/zh/tags/</loc>
+    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wumulong-469.github.io/tags/"
+                href="http://page.wumulong.space/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wumulong-469.github.io/zh/tags/"
+                href="http://page.wumulong.space/zh/tags/"
                 />
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/posts/blog/</loc>
+    <loc>http://page.wumulong.space/zh/posts/k8s/</loc>
+    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://page.wumulong.space/zh/tags/blog/</loc>
     <lastmod>2022-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/categories/devlopment-env/</loc>
+    <loc>http://page.wumulong.space/zh/categories/life/</loc>
+    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://page.wumulong.space/zh/tags/page/</loc>
+    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://page.wumulong.space/zh/posts/blog/</loc>
+    <lastmod>2022-10-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://page.wumulong.space/zh/tags/linux/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/tags/linux/</loc>
+    <loc>http://page.wumulong.space/zh/tags/opengl/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/tags/opengl/</loc>
+    <loc>http://page.wumulong.space/zh/tags/pkg/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/tags/pkg/</loc>
+    <loc>http://page.wumulong.space/zh/tags/scoop/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/tags/scoop/</loc>
+    <loc>http://page.wumulong.space/zh/posts/scoop/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/posts/scoop/</loc>
+    <loc>http://page.wumulong.space/zh/tags/turnip/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/tags/turnip/</loc>
+    <loc>http://page.wumulong.space/zh/posts/turnip/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/posts/turnip/</loc>
-    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wumulong-469.github.io/zh/archives/</loc>
+    <loc>http://page.wumulong.space/zh/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wumulong-469.github.io/archives/"
+                href="http://page.wumulong.space/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wumulong-469.github.io/zh/archives/"
+                href="http://page.wumulong.space/zh/archives/"
                 />
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/search/</loc>
+    <loc>http://page.wumulong.space/zh/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wumulong-469.github.io/search/"
+                href="http://page.wumulong.space/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wumulong-469.github.io/zh/search/"
+                href="http://page.wumulong.space/zh/search/"
                 />
   </url><url>
-    <loc>https://wumulong-469.github.io/zh/series/</loc>
+    <loc>http://page.wumulong.space/zh/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wumulong-469.github.io/series/"
+                href="http://page.wumulong.space/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wumulong-469.github.io/zh/series/"
+                href="http://page.wumulong.space/zh/series/"
                 />
   </url>
 </urlset>
