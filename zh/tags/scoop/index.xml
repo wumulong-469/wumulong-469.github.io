@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>scoop on Live &amp; Programe</title>
-    <link>http://page.wumulong.space/zh/tags/scoop/</link>
+    <link>https://page.wumulong.space/zh/tags/scoop/</link>
     <description>Recent content in scoop on Live &amp; Programe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://page.wumulong.space/zh/tags/scoop/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://page.wumulong.space/zh/tags/scoop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scoop简单使用</title>
-      <link>http://page.wumulong.space/zh/posts/scoop/</link>
+      <link>https://page.wumulong.space/zh/posts/scoop/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://page.wumulong.space/zh/posts/scoop/</guid>
+      <guid>https://page.wumulong.space/zh/posts/scoop/</guid>
       <description>scoop的一个简单使用</description>
     </item>
     

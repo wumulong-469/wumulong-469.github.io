@@ -2,127 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://page.wumulong.space/zh/categories/</loc>
+    <loc>https://page.wumulong.space/zh/categories/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://page.wumulong.space/categories/"
+                href="https://page.wumulong.space/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://page.wumulong.space/zh/categories/"
+                href="https://page.wumulong.space/zh/categories/"
                 />
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/containerd/</loc>
+    <loc>https://page.wumulong.space/zh/tags/containerd/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/categories/devlopment-env/</loc>
+    <loc>https://page.wumulong.space/zh/categories/devlopment-env/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/kube/</loc>
+    <loc>https://page.wumulong.space/zh/tags/kube/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/</loc>
+    <loc>https://page.wumulong.space/zh/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://page.wumulong.space/"
+                href="https://page.wumulong.space/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://page.wumulong.space/zh/"
+                href="https://page.wumulong.space/zh/"
                 />
   </url><url>
-    <loc>http://page.wumulong.space/zh/posts/</loc>
+    <loc>https://page.wumulong.space/zh/posts/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/</loc>
+    <loc>https://page.wumulong.space/zh/tags/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://page.wumulong.space/tags/"
+                href="https://page.wumulong.space/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://page.wumulong.space/zh/tags/"
+                href="https://page.wumulong.space/zh/tags/"
                 />
   </url><url>
-    <loc>http://page.wumulong.space/zh/posts/k8s/</loc>
+    <loc>https://page.wumulong.space/zh/posts/k8s/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/blog/</loc>
+    <loc>https://page.wumulong.space/zh/tags/blog/</loc>
     <lastmod>2022-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/categories/life/</loc>
+    <loc>https://page.wumulong.space/zh/categories/life/</loc>
     <lastmod>2022-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/page/</loc>
+    <loc>https://page.wumulong.space/zh/tags/page/</loc>
     <lastmod>2022-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/posts/blog/</loc>
+    <loc>https://page.wumulong.space/zh/posts/blog/</loc>
     <lastmod>2022-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/linux/</loc>
+    <loc>https://page.wumulong.space/zh/tags/linux/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/opengl/</loc>
+    <loc>https://page.wumulong.space/zh/tags/opengl/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/pkg/</loc>
+    <loc>https://page.wumulong.space/zh/tags/pkg/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/scoop/</loc>
+    <loc>https://page.wumulong.space/zh/tags/scoop/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/posts/scoop/</loc>
+    <loc>https://page.wumulong.space/zh/posts/scoop/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/tags/turnip/</loc>
+    <loc>https://page.wumulong.space/zh/tags/turnip/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/posts/turnip/</loc>
+    <loc>https://page.wumulong.space/zh/posts/turnip/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://page.wumulong.space/zh/archives/</loc>
+    <loc>https://page.wumulong.space/zh/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://page.wumulong.space/archives/"
+                href="https://page.wumulong.space/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://page.wumulong.space/zh/archives/"
+                href="https://page.wumulong.space/zh/archives/"
                 />
   </url><url>
-    <loc>http://page.wumulong.space/zh/search/</loc>
+    <loc>https://page.wumulong.space/zh/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://page.wumulong.space/search/"
+                href="https://page.wumulong.space/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://page.wumulong.space/zh/search/"
+                href="https://page.wumulong.space/zh/search/"
                 />
   </url><url>
-    <loc>http://page.wumulong.space/zh/series/</loc>
+    <loc>https://page.wumulong.space/zh/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://page.wumulong.space/series/"
+                href="https://page.wumulong.space/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://page.wumulong.space/zh/series/"
+                href="https://page.wumulong.space/zh/series/"
                 />
   </url>
 </urlset>

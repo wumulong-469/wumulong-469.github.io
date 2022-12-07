@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: http://page.wumulong.space/sitemap.xml
+Sitemap: https://page.wumulong.space/sitemap.xml
