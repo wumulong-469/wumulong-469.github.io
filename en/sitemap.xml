@@ -2,76 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://page.wumulong.space/archives/</loc>
+    <loc>https://www.wumulong.space/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://page.wumulong.space/zh/archives/"
+                href="https://www.wumulong.space/zh/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://page.wumulong.space/archives/"
+                href="https://www.wumulong.space/archives/"
                 />
   </url><url>
-    <loc>https://page.wumulong.space/categories/</loc>
+    <loc>https://www.wumulong.space/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://page.wumulong.space/zh/categories/"
+                href="https://www.wumulong.space/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://page.wumulong.space/categories/"
+                href="https://www.wumulong.space/categories/"
                 />
   </url><url>
-    <loc>https://page.wumulong.space/</loc>
+    <loc>https://www.wumulong.space/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://page.wumulong.space/zh/"
+                href="https://www.wumulong.space/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://page.wumulong.space/"
+                href="https://www.wumulong.space/"
                 />
   </url><url>
-    <loc>https://page.wumulong.space/search/</loc>
+    <loc>https://www.wumulong.space/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://page.wumulong.space/zh/search/"
+                href="https://www.wumulong.space/zh/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://page.wumulong.space/search/"
+                href="https://www.wumulong.space/search/"
                 />
   </url><url>
-    <loc>https://page.wumulong.space/series/</loc>
+    <loc>https://www.wumulong.space/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://page.wumulong.space/zh/series/"
+                href="https://www.wumulong.space/zh/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://page.wumulong.space/series/"
+                href="https://www.wumulong.space/series/"
                 />
   </url><url>
-    <loc>https://page.wumulong.space/tags/</loc>
+    <loc>https://www.wumulong.space/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://page.wumulong.space/zh/tags/"
+                href="https://www.wumulong.space/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://page.wumulong.space/tags/"
+                href="https://www.wumulong.space/tags/"
                 />
   </url>
 </urlset>

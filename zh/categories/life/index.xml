@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>life on Live &amp; Programe</title>
-    <link>https://page.wumulong.space/zh/categories/life/</link>
+    <link>https://www.wumulong.space/zh/categories/life/</link>
     <description>Recent content in life on Live &amp; Programe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://page.wumulong.space/zh/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wumulong.space/zh/categories/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基于github.io和hugo的简单的blog</title>
-      <link>https://page.wumulong.space/zh/posts/blog/</link>
+      <link>https://www.wumulong.space/zh/posts/blog/</link>
       <pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://page.wumulong.space/zh/posts/blog/</guid>
+      <guid>https://www.wumulong.space/zh/posts/blog/</guid>
       <description>搭建一个静态页面的blog,并让github代理你的blog</description>
     </item>
     
     <item>
       <title>从捡垃圾到安装Turnip驱动安装和食用</title>
-      <link>https://page.wumulong.space/zh/posts/turnip/</link>
+      <link>https://www.wumulong.space/zh/posts/turnip/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://page.wumulong.space/zh/posts/turnip/</guid>
+      <guid>https://www.wumulong.space/zh/posts/turnip/</guid>
       <description>折腾日记</description>
     </item>
     
